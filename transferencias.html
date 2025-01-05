@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transferencias - Hamburguesas "El Sabor"</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f5f1;
+            color: #333;
+        }
+
+        header {
+            background-color: #e74c3c;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        main {
+            max-width: 600px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .data-box {
+            margin-bottom: 1.5rem;
+        }
+
+        .data-box h2 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: #e74c3c;
+        }
+
+        .data-box p {
+            font-size: 1rem;
+            margin: 0.5rem 0;
+            background-color: #f8f5f1;
+            padding: 0.5rem;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .copy-btn {
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            padding: 0.3rem 0.6rem;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .copy-btn:hover {
+            background-color: #c0392b;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+            background-color: #e74c3c;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Hamburguesas "El Sabor"</h1>
+    </header>
+    <main>
+        <h2>Información para transferencias</h2>
+        <div class="data-box">
+            <h2>Nombre:</h2>
+            <p>Hamburguesas "El Sabor" <button class="copy-btn" onclick="copyToClipboard('Hamburguesas \"El Sabor\"')">Copiar</button></p>
+        </div>
+        <div class="data-box">
+            <h2>Número de cuenta:</h2>
+            <p>1234567890 <button class="copy-btn" onclick="copyToClipboard('1234567890')">Copiar</button></p>
+        </div>
+        <div class="data-box">
+            <h2>CLABE interbancaria:</h2>
+            <p>012345678901234567 <button class="copy-btn" onclick="copyToClipboard('012345678901234567')">Copiar</button></p>
+        </div>
+        <div class="data-box">
+            <h2>Banco:</h2>
+            <p>BBVA <button class="copy-btn" onclick="copyToClipboard('BBVA')">Copiar</button></p>
+        </div>
+    </main>
+    <footer>
+        <p>Gracias por tu preferencia. ¡Que disfrutes tu hamburguesa! 🍔</p>
+    </footer>
+
+    <script>
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                alert(`"${text}" copiado al portapapeles.`);
+            }).catch(err => {
+                console.error('Error al copiar al portapapeles: ', err);
+            });
+        }
+    </script>
+</body>
+</html>
